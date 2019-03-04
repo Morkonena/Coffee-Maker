@@ -1,0 +1,6 @@
+{
+    "C_Cpp.dimInactiveRegions": false,
+    "editor.tokenColorCustomizations": {
+        "types": "#FF0000"
+    },
+}

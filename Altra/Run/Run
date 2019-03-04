@@ -1,0 +1,4 @@
+#!/bin/sh
+LD_LIBRARY_PATH=$PWD/Binaries
+export LD_LIBRARY_PATH
+./Altra
