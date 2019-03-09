@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 25.8.2018
+// Created by MÃ¶rkÃ¶nenÃ¤ on 25.8.2018
 //
 
 #ifndef RANGE_H

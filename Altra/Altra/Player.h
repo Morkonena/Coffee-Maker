@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 30.12.2018
+// Created by MÃ¶rkÃ¶nenÃ¤ on 30.12.2018
 //
 
 #ifndef PLAYER_H

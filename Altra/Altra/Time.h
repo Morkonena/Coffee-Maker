@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 16.7.2018
+// Created by MÃ¶rkÃ¶nenÃ¤ on 16.7.2018
 //
 
 #ifndef CORE_TIME_H

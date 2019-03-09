@@ -7,6 +7,7 @@
 
 #include <assert.h>
 #include <algorithm>
+#include <atomic>
 #include <cstring>
 #include <functional>
 #include <initializer_list>
@@ -29,7 +30,7 @@ using Parameters = std::initializer_list<T>;
 template<typename K, typename T>
 using Map = std::map<K, T>;
 
-typedef std::mutex Mutex;
+typedef std::mutex Lock;
 
 template<typename K>
 using Set = std::set<K>;

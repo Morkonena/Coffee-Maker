@@ -1,11 +1,11 @@
 CC=g++
 INCLUDES:=-I../Cappuccino/Cappuccino -I../Affogato/Affogato -I../Americano/Americano -I../Espresso/Espresso -I../Mocha/Mocha \
-					  -L../Cappuccino -L../Affogato -L../Americano -L../Espresso -L../Mocha -L../External/Fmod/Linux/lib/x86_64
+					  -L../Cappuccino -L../Affogato -L../Americano -L../Espresso -L../Mocha
 
 CFLAGS=-std=c++14 -w -DLINUX -fpermissive
 SRC:=$(wildcard Altra/*.cpp) Altra/Simplex/Noise.cpp Altra/Linux/Adapter.cpp
 OUTPUT=Run/Altra
-LIBS:=-lcm -lcm2d -lcmw -lcmi -lcmp -lfmod
+LIBS:=-lcm -lcm2d -lcmw -lcmi -lcmp
 
 release:
 	$(CC) $(CFLAGS) $(SRC) $(LIBS) $(INCLUDES) -o $(OUTPUT)

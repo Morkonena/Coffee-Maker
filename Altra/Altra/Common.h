@@ -4,14 +4,13 @@
 #ifdef ANDROID
 
 #include <cmath>
+
 #define ABS(A)		abs((A))
 #define POW(A, B) pow((A), (B))
 #define SIGN(A)		((A) < 0 ? -1 : 1)
 
 #include <Actor.h>
 #include <Asset.h>
-#include <Audio.h>
-#include <AudioSystem.h>
 #include <Body.h>
 #include <Box.h>
 #include <Camera.h>
@@ -33,14 +32,13 @@ using namespace Core;
 #else // WINDOWS & Linux
 
 #include <cmath>
+
 #define ABS(A)		abs((A))
 #define POW(A, B) pow((A), (B))
 #define SIGN(A)		((A) < 0 ? -1 : 1)
 
 #include <Actor.h>
 #include <Asset.h>
-#include <Audio.h>
-#include <AudioSystem.h>
 #include <Body.h>
 #include <Box.h>
 #include <Camera.h>
@@ -65,5 +63,4 @@ using namespace Core;
 #include "Time.h"
 
 #endif // ANDROID
-
 #endif // !COMMON_H

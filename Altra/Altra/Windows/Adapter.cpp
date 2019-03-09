@@ -10,7 +10,7 @@ Managed<Window> window;
 void Initialize()
 {
 	Graphics::Initialize();
-	
+
 	window = std::make_unique<Window>(1920, 1080, true, "Altra");
 	window->SetVSync(false);
 
@@ -19,7 +19,7 @@ void Initialize()
 
 	window->Start();
 	window->SetCursorVisible(true);
-	
+
 	Sprite::Initialize();
 	Tilemap::Initialize();
 
@@ -32,8 +32,6 @@ void Initialize()
 	Camera::SetDepth(false);
 
 	Physics::Initialize(Vector2(0, 0));
-
-	AudioSystem::Initialize();
 }
 
 int main ()
@@ -93,19 +91,6 @@ int main ()
 
 		try
 		{
-			AudioSystem::Tick();
-		}
-		catch (const std::exception& e)
-		{
-			PERROR("ERROR_AUDIO_SYSTEM: ", e.what());
-		}
-		catch (...)
-		{
-			PERROR("ERROR_AUDIO_SYSTEM");
-		}
-
-		try
-		{
 			Altra_Tick(b);
 		}
 		catch (const std::exception& e)
@@ -142,4 +127,3 @@ int main ()
 
 	return 0;
 }
-

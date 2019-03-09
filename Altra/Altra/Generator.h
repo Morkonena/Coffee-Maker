@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 16.2.2019
+// Created by MÃ¶rkÃ¶nenÃ¤ on 16.2.2019
 //
 
 #ifndef GENERATOR_H

@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 17.2.2019
+// Created by MÃ¶rkÃ¶nenÃ¤ on 17.2.2019
 //
 
 #ifndef RANDOM_H

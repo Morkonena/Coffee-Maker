@@ -36,8 +36,6 @@ void Initialize()
 	Camera::SetDepth(false);
 
 	Physics::Initialize(Vector2(0, 0));
-
-	AudioSystem::Initialize();
 }
 
 int main ()
@@ -93,19 +91,6 @@ int main ()
 		catch (...)
 		{
 			PERROR("ERROR_PHYSICS_SYSTEM");
-		}
-
-		try
-		{
-			AudioSystem::Tick();
-		}
-		catch (const std::exception& e)
-		{
-			PERROR("ERROR_AUDIO_SYSTEM: ", e.what());
-		}
-		catch (...)
-		{
-			PERROR("ERROR_AUDIO_SYSTEM");
 		}
 
 		try

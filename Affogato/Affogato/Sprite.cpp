@@ -1,5 +1,5 @@
 #include "Sprite.h"
-#include "AudioSystem.h"
+
 #include <Actor.h>
 #include <Asset.h>
 #include <Camera.h>
@@ -106,7 +106,7 @@ void Sprite::Initialize()
 	Quad = std::make_unique<Mesh>();
 	Quad->CreateBuffer(BUFFER_TARGET_VERTICES, BUFFER_ELEMENT_VECTOR2).SetData(vertices, 6);
 	Quad->CreateBuffer(BUFFER_TARGET_UVS, BUFFER_ELEMENT_VECTOR2).SetData(uvs, 6);
-	
+
   if (!Quad->Upload())
   {
     PERROR("ERROR_CREATE_SPRITE_QUAD");

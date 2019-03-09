@@ -22,8 +22,6 @@ extern "C"
 		Camera::SetDepth(false);
 
 		Physics::Initialize(Vector2(0));
-
-		AudioSystem::Initialize();
 	}
 
 	void Java_com_quanfoxes_altra_Adapter_Resize(JavaEnvironment environment, JavaObject instance, JavaInteger width, JavaInteger height)
@@ -39,7 +37,6 @@ extern "C"
 	void Java_com_quanfoxes_altra_Adapter_Tick(JavaEnvironment environment, JavaObject instance, JavaFloat delta_time)
 	{
 		Physics::Tick(delta_time);
-		AudioSystem::Tick();
 		Altra_Tick(delta_time);
 		Input::Update();
 	}

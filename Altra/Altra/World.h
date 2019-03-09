@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 1.1.2019
+// Created by MÃ¶rkÃ¶nenÃ¤ on 1.1.2019
 //
 
 #ifndef WORLD_H

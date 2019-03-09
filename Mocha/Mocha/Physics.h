@@ -36,11 +36,47 @@ namespace Core
 		RAYCAST_COMMAND_CONTINUE = -1
 	};
 
-	class PhysicsDatabase
-	{
-	private:
+  struct PhysicsBodyUpdate
+  {
+    Vector2 Position;
+    float Rotation;
+  };
 
-	public:
+  class PhysicsUpdate
+  {
+  private:
+    Map<Body*,PhysicsBodyUpdate> Updates;
+
+  private:
+    int Priority;
+
+  public:
+    PhysicsUpdate (int priority);
+
+    void Merge (PhysicsUpdate& update);
+
+    int GetPriority() const;
+  };
+
+  struct PhysicsThread
+  {
+    List<PhysicsUpdate> Updates;
+    int Priority;
+  };
+
+	class PhysicsBridge
+	{
+  private:
+    static List<PhysicsUpdate> Updates;
+    static Map<int, PhysicsThread> Threads;
+    static Lock UpdateLock;
+
+  public:
+    static void Initialize (int priority);
+    static void Push (PhysicsUpdate& update);
+
+  public:
+    static PhysicsUpdate GetMergedUpdate();
 	};
 
   class Physics

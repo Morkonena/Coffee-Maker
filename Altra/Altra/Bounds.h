@@ -1,5 +1,5 @@
 //
-// Created by Mörkönenä on 24.2.2019
+// Created by MÃ¶rkÃ¶nenÃ¤ on 24.2.2019
 //
 
 #ifndef BOUNDS_H
@@ -61,4 +61,3 @@ inline bool Bounds<Number>::Inside(T x, T y) const
 }
 
 #endif // !BOUNDS_H
-

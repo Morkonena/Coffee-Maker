@@ -78,12 +78,12 @@
     <LibraryPath>$(SolutionDir)..\Coffee\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Program Files %28x86%29\FMOD\api\lowlevel\inc;$(SolutionDir)..\Cappuccino\Cappuccino;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\FMOD\api\lowlevel\lib;$(SolutionDir)..\Cappuccino\x64\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)..\Cappuccino\Cappuccino;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Cappuccino\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Program Files %28x86%29\FMOD\api\lowlevel\inc;$(SolutionDir)..\Cappuccino\Cappuccino;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\FMOD\api\lowlevel\lib;$(SolutionDir)..\Cappuccino\x64\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)..\Cappuccino\Cappuccino;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Cappuccino\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,19 +149,15 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>Cappuccino.lib;fmod64_vc.lib</AdditionalDependencies>
+      <AdditionalDependencies>Cappuccino.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Audio.cpp" />
-    <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Audio.h" />
-    <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Tilemap.h" />

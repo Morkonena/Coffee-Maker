@@ -9,8 +9,6 @@ Managed<Actor> PlayerInstance;
 Managed<Actor> Ball;
 Managed<TextureArray> Tileset;
 Managed<Actor> Background;
-Managed<Audio> Music;
-Managed<Audio> Music1;
 
 void CreatePlayer ()
 {
@@ -91,15 +89,6 @@ void CreateBackground()
 	configuration.UndergroundScale = 2.00f;
 
 	Generator::Generate(&configuration);
-
-	Music = std::make_unique<Audio>(String("NULL_OF_NULL.mp3"));
-	Music->Play();
-	//Music->SetSpeed(2.0f);
-	Music->SetPitch(0.5f);
-
-	Music1 = std::make_unique<Audio>(String("NoGay.mp3"));
-	//Music1->SetSpeed(98.0f);
-	//Music1->Play();
 }
 
 void Altra_Begin()
@@ -112,9 +101,6 @@ void Altra_Tick (float dt)
 {
 	Camera::Begin();
 	Camera::Clear(Vector4(0x87, 0xCE, 0xEB, 0xFF) * (1.0f / 255.0f), CLEAR_BOTH);
-
-	//Camera::position += Vector2(dt, 0);
-	//PRINT("Tick: ", dt);
 
 	PlayerInstance->OnTick();
 	Background->OnTick();
